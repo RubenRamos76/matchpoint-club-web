@@ -1,0 +1,15 @@
+# Nunca subir datos de jugadores, backups ni credenciales al repositorio público.
+data/
+backups/
+*.sqlite
+*.sqlite3
+*.db
+*.env
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+tests/*.png
+.DS_Store

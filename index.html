@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10283f">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src https://api.github.com; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="MatchPoint Club: aplicación responsive de gestión de clubes de pádel con sincronización GitHub.">
+  <title>MatchPoint Club | GitHub 2.2</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/github-sync.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand"><div class="brand-mark">M</div><div>MATCHPOINT<small>CLUB MANAGEMENT</small></div></div>
+      <div class="nav-label">MENÚ PRINCIPAL</div>
+      <nav class="nav" id="mainNav">
+        <a href="#resumen" data-page="resumen" class="active"><span class="ico">▦</span>Resumen</a>
+        <a href="#jugadores" data-page="jugadores"><span class="ico">♙</span>Jugadores</a>
+        <a href="#partidos" data-page="partidos"><span class="ico">⌁</span>Partidos</a>
+        <a href="#disponibilidad" data-page="disponibilidad"><span class="ico">▣</span>Disponibilidad</a>
+        <a href="#pistas" data-page="pistas"><span class="ico">▤</span>Pistas y reservas</a>
+        <div class="nav-label">GESTIÓN</div>
+        <a href="#grupos" data-page="grupos"><span class="ico">◎</span>Grupos por nivel</a>
+        <a href="#mensajes" data-page="mensajes"><span class="ico">◉</span>Mensajes</a>
+        <a href="#informes" data-page="informes"><span class="ico">▥</span>Informes</a>
+        <a href="#configuracion" data-page="configuracion"><span class="ico">⚙</span>Configuración</a>
+      </nav>
+      <div class="sidebar-bottom">CLUB ACTIVO<div class="club-chip"><div class="club-avatar">PC</div><div><strong id="sidebarClubName">Padel Club Centro</strong><br><span>GitHub Pages · v2.2</span></div></div></div>
+    </aside>
+    <main class="main" id="mainContent">
+      <header class="topbar">
+        <div class="crumb"><button id="mobileMenu" class="mobile-menu menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>Club / <strong id="currentSection">Resumen</strong></div>
+        <div class="top-actions"><div class="live" id="cloudStatus" data-sync="local">Modo local · sin sincronizar</div><span class="admin-name">Administrador</span><div class="avatar">AD</div></div>
+      </header>
+      <div class="sync-alert" id="syncAlert" hidden role="alert"></div>
+      <div class="content" id="pageContent"><p class="sub">Cargando MatchPoint Club…</p></div>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Activa JavaScript en tu navegador para utilizar esta aplicación.</p></noscript>
+</body>
+</html>
